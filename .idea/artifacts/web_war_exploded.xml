@@ -1,0 +1,31 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="web:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/web_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="online_store/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="online_store" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="javax.annotation" />
+          <element id="library" level="project" name="javax.jms" />
+          <element id="library" level="project" name="javax.persistence" />
+          <element id="library" level="project" name="javax.servlet.jsp.jstl" />
+          <element id="library" level="project" name="javax.transaction" />
+          <element id="library" level="project" name="junit-4.12" />
+          <element id="library" level="project" name="javax.resource" />
+          <element id="library" level="project" name="standard" />
+          <element id="library" level="project" name="mchange-commons-java-0.2.11" />
+          <element id="library" level="project" name="gson-2.2.2" />
+          <element id="library" level="project" name="lombok" />
+          <element id="library" level="project" name="jstl" />
+          <element id="library" level="project" name="commons-io-2.5" />
+          <element id="library" level="project" name="commons-lang3-3.5" />
+          <element id="library" level="project" name="mysql-connector-java-5.1.47-bin" />
+          <element id="library" level="project" name="h2-1.4.199" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

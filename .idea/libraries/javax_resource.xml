@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="javax.resource">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Home work Java/Проект/online_store/lib/javax.resource.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

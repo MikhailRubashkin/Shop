@@ -1,0 +1,79 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+          version="2.0" >
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <fmt:setLocale value="${sessionScope.locale}"/>
+            <fmt:setBundle basename="messages" var="i18n"/>
+            <c:url var="path" value="/frontController?command=${sessionScope.pageName}"></c:url>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><fmt:message bundle="${i18n}"  key="scooter"/></a>
+            </div>
+            <c:if test="${empty user or not empty user}">
+                <div class="collapse navbar-collapse" id="myNavbar">
+
+
+
+                    <ul class="nav navbar-nav">
+                        <c:set var="navName"    value="Товары"/>
+                        <c:choose>
+                            <c:when test="${pageName eq 'Products'}">
+                                <li class="Info"><a href="#">${navName}</a></li>
+                            </c:when>
+                            <c:otherwise>
+                                <li><a href="${pageContext.request.contextPath}/frontController?command=products">${navName}</a></li>
+                            </c:otherwise>
+                        </c:choose>
+
+
+
+                        <c:set var="navName"><fmt:message bundle="${i18n}"  key="basket.basket"></fmt:message></c:set>
+                        <c:choose>
+                            <c:when test="${pageName eq 'Orders'}">
+                                <li class="Info"><a href="#">${navName}</a></li>
+                            </c:when>
+                            <c:otherwise>
+                                <li><a href="${pageContext.request.contextPath}/frontController?command=orders">${navName}</a></li>
+                            </c:otherwise>
+                        </c:choose>
+
+                        <c:set var="navName"><fmt:message bundle="${i18n}"  key="registration.registration"></fmt:message></c:set>
+                        <c:choose>
+                            <c:when test="${pageName eq 'Registration'}">
+                                <li class="Info"><a href="#">${navName}</a></li>
+                            </c:when>
+                            <c:otherwise>
+                                <li><a href="${pageContext.request.contextPath}/frontController?command=registration">${navName}</a></li>
+                            </c:otherwise>
+                        </c:choose>
+
+
+                        <li><a href="${path}&amp;locale=ru"><fmt:message key="header.locale.ru" bundle="${i18n}"/></a></li>
+                        <li><a href="${path}&amp;locale=en"><fmt:message key="header.locale.en" bundle="${i18n}"/></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <c:if test="${not empty user}">
+                            <li><span class="text"><fmt:message bundle="${i18n}"  key="Hi.title"></fmt:message> ${user.name}!</span></li>
+                        </c:if>
+                        <c:if test="${empty user and not (pageName eq 'Login')}">
+                            <li><a href="${pageContext.request.contextPath}/frontController?command=login"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+                        </c:if>
+                        <c:if test="${not empty user }">
+                            <li><a href="${pageContext.request.contextPath}/frontController?command=logout"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+                        </c:if>
+
+                    </ul>
+                </div>
+            </c:if>
+        </div>
+    </nav>
+
+</jsp:root>

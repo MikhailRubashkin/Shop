@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="hamcrest-core-1.3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Home work Java/Проект/online_store/lib/hamcrest-core-1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Home work Java/Проект/online_store/lib/javax.annotation.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Home work Java/Проект/online_store/lib/javax.ejb.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Home work Java/Проект/online_store/lib/javax.jms.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Home work Java/Проект/online_store/lib/javax.persistence.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Home work Java/Проект/online_store/lib/javax.resource.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Home work Java/Проект/online_store/lib/javax.servlet.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Home work Java/Проект/online_store/lib/javax.servlet.jsp.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Home work Java/Проект/online_store/lib/javax.servlet.jsp.jstl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Home work Java/Проект/online_store/lib/javax.transaction.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Home work Java/Проект/online_store/lib/junit-4.12.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
